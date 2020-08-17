@@ -9,7 +9,7 @@ public class GreatestCommonDivisor {
         System.out.println(greatestCommonDivisor(a, b));
     }
 
-    public static int greatestCommonDivisor(int a, int b) {
+ /*   public static int greatestCommonDivisor(int a, int b) {
         int common = 1;
         for (int i = 2; i <= a && i <= b; i++) {
             if (a % i == 0 && b % i == 0) {
@@ -19,5 +19,14 @@ public class GreatestCommonDivisor {
             }
         }
         return common;
+    } */
+
+    public static int greatestCommonDivisor(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return greatestCommonDivisor(b, a%b);
+        }
+
     }
 }
